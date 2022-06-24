@@ -1,0 +1,25 @@
+{
+  "name": "test-static-props-paths-revalidate-example",
+  "scripts": {
+    "layer0:dev": "layer0 dev",
+    "layer0:build": "layer0 build",
+    "layer0:deploy": "layer0 deploy",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@layer0/cli": "^4.15.1",
+    "@layer0/core": "^4.15.1",
+    "@layer0/devtools": "^4.15.1",
+    "@layer0/next": "^4.15.1",
+    "@layer0/prefetch": "^4.15.1",
+    "@layer0/react": "^4.15.1"
+  }
+}
