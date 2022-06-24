@@ -2,22 +2,21 @@ const Page = ({ time, name }) => {
   return `Time: ${time}, Name: ${name}`;
 };
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { name } = params;
-  return {
-    props: {
-      name,
-      time: new Date().toString(),
-    },
-    revalidate: 2,
-  };
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { name: "LOL" } }],
-    fallback: false,
-  };
+  const whiteListName = { "20-check-tires": true };
+  if (whiteListName.hasOwnProperty(name)) {
+    return {
+      props: {
+        name,
+        time: new Date().toString(),
+      },
+    };
+  } else {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default Page;
