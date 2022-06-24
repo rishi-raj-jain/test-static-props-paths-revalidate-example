@@ -4,6 +4,11 @@ const Page = ({ time, name }) => {
 
 export async function getStaticProps({ params }) {
   const { name } = params;
+  if (name !== 'LOL') {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       name,
@@ -15,8 +20,8 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { name: "LOL" } }],
-    fallback: false,
+    paths: [{ params: { name: 'LOL' } }],
+    fallback: 'blocking',
   };
 }
 
