@@ -13,7 +13,8 @@ module.exports = new Router()
       },
       edge: {
         forcePrivateCaching: true,
-        maxAgeSeconds: 60 * 60,
+        maxAgeSeconds: 5,
+        staleWhileRevalidateSeconds: 5
       },
     });
   })
