@@ -1,5 +1,5 @@
 {
-  "name": "test-static-props-paths-revalidate-example",
+  "name": "test-static-props-paths-true-example",
   "scripts": {
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
